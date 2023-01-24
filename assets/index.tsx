@@ -1,0 +1,9 @@
+export { default as Apple } from './Apple.png';
+export { default as Awwwards } from './Awwwards.png';
+export { default as Behance } from './Behance.png';
+export { default as Dribbble } from './Dribbble.png';
+export { default as Google } from './Google.png';
+export { default as HeaderImage } from './HeaderImage.png';
+export { default as ImagePlaceholder } from './ImagePlaceholder.png';
+export { default as WorkPlaceholder } from './WorkPlaceholder.png';
+export { default as AuthorPlaceholder } from './AuthorPlaceholder.png';

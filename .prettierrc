@@ -1,7 +1,6 @@
 {
-    "bracketSpacing": true,
-    "jsxSingleQuote": true,
-    "singleQuote": true,
-    "tabWidth": 2
+  "bracketSpacing": true,
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "tabWidth": 2
 }
-
