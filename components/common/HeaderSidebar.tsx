@@ -1,8 +1,8 @@
-type LayoutSidebarProps = {
-  handleClickLayoutSidebar: () => void;
+type HeaderSidebarProps = {
+  handleClickHeaderSidebar: () => void;
 };
 
-function LayoutSidebar({ handleClickLayoutSidebar }: LayoutSidebarProps) {
+function HeaderSidebar({ handleClickHeaderSidebar }: HeaderSidebarProps) {
   return (
     <>
       <div
@@ -19,10 +19,10 @@ function LayoutSidebar({ handleClickLayoutSidebar }: LayoutSidebarProps) {
       <div
         id='layout-overlay'
         className='top-0 z-40 w-screen h-screen bg-black fixed opacity-30 hidden'
-        onClick={handleClickLayoutSidebar}
+        onClick={handleClickHeaderSidebar}
       ></div>
     </>
   );
 }
 
-export default LayoutSidebar;
+export default HeaderSidebar;

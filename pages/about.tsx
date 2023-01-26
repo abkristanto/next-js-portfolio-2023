@@ -1,8 +1,9 @@
+import { Layout } from '@/components';
 import Image from 'next/image';
 
 function About() {
   return (
-    <>
+    <Layout>
       <div className='bg-secondary text-secondary-content'>
         <div className='container mx-auto p-5'>
           <div className='flex items-center justify-between'>
@@ -22,7 +23,7 @@ function About() {
         </div>
       </div>
       <div>About Page</div>
-    </>
+    </Layout>
   );
 }
 

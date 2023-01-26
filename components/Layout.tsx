@@ -3,60 +3,27 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { CgMenuGridO } from 'react-icons/cg';
-import LayoutSidebar from './LayoutSidebar';
+import LayoutSidebar from './common/HeaderSidebar';
+import { motion } from 'framer-motion';
 
 function Layout({ children }: { children: React.ReactNode }) {
-  const scrollPosition = useScrollPosition();
-
-  const handleClickLayoutSidebar = () => {
-    const layoutSidebarEl = document.getElementById('layout-sidebar');
-    layoutSidebarEl?.classList.toggle('-left-full');
-    layoutSidebarEl?.classList.toggle('left-0');
-    const layoutOverlayEl = document.getElementById('layout-overlay');
-    layoutOverlayEl?.classList.toggle('hidden');
+  const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
   };
 
   return (
-    <div className='font-epilogue'>
-      <Head>
-        <title>Abraham Kristanto Portfolio 2023</title>
-        <meta
-          name='description'
-          content='Abraham Kristanto Portfolio Home Page'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <nav
-        className={`flex sticky top-0 p-5 w-full justify-between transition-all duration-100 ${
-          scrollPosition > 0
-            ? 'bg-base-100 text-base-content shadow-sm bg-opacity-80 backdrop-blur'
-            : 'text-base-content'
-        }`}
-      >
-        <Link href='/'>
-          <div className='text-xl ml-2 hover:text-primary cursor-pointer'>
-            Abraham Kristanto
-          </div>
-        </Link>
-        <div className='hidden md:flex gap-8 text-lg'>
-          <Link href='/about'>
-            <div className='hover:text-primary cursor-pointer'>About</div>
-          </Link>
-          <Link href='/work'>
-            <div className='hover:text-primary cursor-pointer'>Work</div>
-          </Link>
-          <Link href='/contact'>
-            <div className='hover:text-primary cursor-pointer'>Contact</div>
-          </Link>
-        </div>
-        <div className='block md:hidden' onClick={handleClickLayoutSidebar}>
-          <CgMenuGridO size={25} />
-        </div>
-      </nav>
-      <LayoutSidebar handleClickLayoutSidebar={handleClickLayoutSidebar} />
+    <motion.main
+      initial='hidden'
+      animate='enter'
+      exit='exit'
+      variants={variants}
+      transition={{ type: 'linear' }}
+      className=''
+    >
       {children}
-    </div>
+    </motion.main>
   );
 }
 
