@@ -5,7 +5,7 @@ function Header() {
   return (
     <>
       <div className='flex flex-wrap my-10 justify-between'>
-        <div>
+        <div className='text-center md:text-justify'>
           <div className='font-bold'>Branding | Image making</div>
           <h1 className='text-6xl font-bold my-4'>My Awesome Portfolio</h1>
           <div className='text-xl'>

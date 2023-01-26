@@ -4,7 +4,7 @@ import { Google, Apple, Awwwards, Behance, Dribbble } from '../assets';
 function Logos() {
   return (
     <>
-      <div className='flex justify-between my-8'>
+      <div className='flex justify-center gap-5 md:justify-between my-8 flex-wrap items-center md:flex-nowrap'>
         <div>
           <Image src={Google} alt='google' />
         </div>
