@@ -1,17 +1,21 @@
 import { Rating } from 'react-daisyui';
-import { AuthorPlaceholder } from '@/assets';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-function Client() {
+type ClientProps = {
+  comment: string;
+  name: string;
+  company: string;
+  rating: number;
+  image: StaticImageData;
+};
+
+function Client({ comment, name, company, rating, image }: ClientProps) {
   return (
-    <div className='border-2 border-neutral bg-base-100 p-5'>
-      <div>
-        This is a template Figma file, turned into code using Anima. Learn more
-        at AnimaApp.com
-      </div>
+    <div className='border-2 border-neutral bg-base-200 p-5 h-80 flex flex-col justify-between'>
+      <div>{comment}</div>
       <div className='flex items-center'>
         <Image
-          src={AuthorPlaceholder}
+          src={image}
           alt='author_placeholder'
           className='border-none mr-3'
         />
@@ -23,7 +27,9 @@ function Client() {
             <Rating.Item className='mask mask-star' />
             <Rating.Item className='mask mask-star' />
           </Rating>
-          <div>Gemma Nolen, {' '} Google</div>
+          <div>
+            {name}, {company}
+          </div>
         </div>
       </div>
     </div>
