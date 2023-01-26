@@ -13,8 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        epilogue: ['Epilogue', 'sans-serif']
-      }
+        epilogue: ['Epilogue', 'sans-serif'],
+      },
     },
   },
   plugins: [require('daisyui')],
