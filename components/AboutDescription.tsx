@@ -1,5 +1,5 @@
-import { ProfilePlaceholder } from "@/assets";
-import Image from "next/image";
+import { ProfilePlaceholder } from '@/assets';
+import Image from 'next/image';
 
 function AboutDescription() {
   return (
