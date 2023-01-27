@@ -7,3 +7,4 @@ export { default as HeaderImage } from './HeaderImage.png';
 export { default as ImagePlaceholder } from './ImagePlaceholder.png';
 export { default as WorkPlaceholder } from './WorkPlaceholder.png';
 export { default as AuthorPlaceholder } from './AuthorPlaceholder.png';
+export { default as ProfilePlaceholder } from './ProfilePlaceholder.png';

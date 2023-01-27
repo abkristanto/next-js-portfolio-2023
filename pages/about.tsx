@@ -1,28 +1,12 @@
-import { Layout } from '@/components';
-import Image from 'next/image';
+import { Layout, AboutDescription, ContactForm } from '@/components';
 
 function About() {
   return (
     <Layout>
-      <div className='bg-secondary text-secondary-content'>
-        <div className='container mx-auto p-5'>
-          <div className='flex items-center justify-between'>
-            <div className='flex flex-col'>
-              <div className='font-bold'>Abraham Kristanto</div>
-              <div>Software Engineer</div>
-              <div>Trainer</div>
-            </div>
-            <div className='flex flex-col'>
-              <div className='font-bold'>Bio:</div>
-              <div>
-                Currently a software engineer at Sea. Worked at Grab, Kompas,
-                for a while. Aspiring network security engineer
-              </div>
-            </div>
-          </div>
-        </div>
+      <AboutDescription />
+      <div className='container mx-auto px-6'>
+        <ContactForm />
       </div>
-      <div>About Page</div>
     </Layout>
   );
 }

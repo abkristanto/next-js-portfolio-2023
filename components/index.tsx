@@ -6,3 +6,4 @@ export { default as Layout } from './Layout';
 export { default as LayoutSidebar } from './common/HeaderSidebar';
 export { default as Logos } from './Logos';
 export { default as Skills } from './Skills';
+export { default as AboutDescription } from './AboutDescription';

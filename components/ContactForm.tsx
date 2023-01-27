@@ -49,7 +49,7 @@ function ContactForm() {
   };
 
   return (
-    <div className='flex flex-col md:flex-row gap-3 justify-between my-16'>
+    <div id='contact' className='flex flex-col md:flex-row gap-3 justify-between my-16'>
       <div className='flex flex-col'>
         <div className='font-bold text-2xl mb-2'>Lets work together</div>
         <div className='w-4/5'>

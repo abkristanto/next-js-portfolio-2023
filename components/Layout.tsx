@@ -19,7 +19,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       animate='enter'
       exit='exit'
       variants={variants}
-      transition={{ type: 'linear' }}
+      transition={{ type: 'inertia', delay: 1 }}
       className=''
     >
       {children}

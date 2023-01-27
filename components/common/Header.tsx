@@ -32,10 +32,10 @@ function Header() {
           <Link href='/about' scroll={false}>
             <div className='hover:text-primary cursor-pointer'>About</div>
           </Link>
-          <Link href='/work'>
+          <Link href='/#work' scroll={false}>
             <div className='hover:text-primary cursor-pointer'>Work</div>
           </Link>
-          <Link href='/contact'>
+          <Link href='/#contact' scroll={false}>
             <div className='hover:text-primary cursor-pointer'>Contact</div>
           </Link>
         </div>
